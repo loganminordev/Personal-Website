@@ -1,0 +1,488 @@
+﻿<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/homePage.css" />
+    <link rel="stylesheet" href="~/css/loadingAnim.css" />
+    <script src="~/js/backgroundReplace.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="~/js/welcomeRotationAnimation.js"></script>
+    <script src="~/js/loadingAnim.js"></script>
+</head>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div id="loadingAnimationContainer">
+    <div class="cube viewport">
+        <div class="sides">
+            <div class="top side">
+                <div class="cube-image"></div>
+            </div>
+            <div class="right side">
+                <div class="cube-image"></div>
+            </div>
+            <div class="bottom side">
+                <div class="cube-image"></div>
+            </div>
+            <div class="left side">
+                <div class="cube-image"></div>
+            </div>
+            <div class="front side">
+                <div class="cube-image"></div>
+            </div>
+            <div class="back side">
+                <div class="cube-image active"></div>
+            </div>
+        </div>
+    </div>
+    <div class="text" id="statusText">Loading <span class="dot" id="dotOne">.</span><span class="dot" id="dotTwo">.</span><span class="dot" id="dotThree">.</span></div>
+</div>
+
+ @* 1<div id="wrapper">
+    2<div class="viewport">
+        3<div class="cube">
+           4 <div class="side">
+                5<div class="cube-image">1</div>
+            </div>
+            4<div class="side">
+                5<div class="cube-image">2</div>
+            </div>
+            4<div class="side">
+                5<div class="cube-image">3</div>
+            </div>
+            4<div class="side">
+                5<div class="cube-image">4</div>
+            </div>
+            4<div class="side">
+                5<div class="cube-image">5</div>
+            </div>
+            4<div class="side">
+                5<div class="cube-image active">6</div>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+<div id="ageVarModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="ageVarModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="myModalLabel">Age Verification :</h3>
+            </div>
+            <div class="modal-body">
+                <p>
+                    This section may contain adult oriented material, and could be viewed objectionable to some persons This material is intended for persons over 21
+                    years of age. If you are accessing this area from any location that deems this type of material to be inappropriate, you should not proceed
+                    You must agree with each of the following statements and indicate your comprehension and permission to abide by the laws that are applicable to you in your geographical location
+                    I am an adult, being of legal age, of 21, in my legal jurisdiction to view adult oriented material. (Local laws vary throughout the United States, so if you are not 100% sure of the laws applicable to you, you are advised to proceed no further.
+                    I will not redistribute this material to anyone for which it is illegal for them to view or possess such material, nor will I permit any minor, or any person who would find this personally offensive, to view this material.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" data-dismiss="modal" id="age-yes">I accept</button>
+                <button class="btn btn-danger" data-dismiss="modal" id="age-no">I reject</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000" style="width: 750px; height:400px;">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active" style="width: 750px; height: 400px;">
+            <img src="~/images/sCol.jpg" class="img-responsive" width = 750  />
+            <div class="carousel-caption">
+                <p style="background-color: black;">
+                    Welcome to my personal website that combines my profession with my hobby of gaming.
+                </p>
+            </div>
+        </div>
+        <div class="item" style="width: 750px; height: 400px;">
+            <img src="~/images/retromario.jpg" alt="Visual Studio" class="img-responsive" width = 750 />
+            <div class="carousel-caption">
+                <p>
+                    Mario is the most iconic figure when it comes to gaming, check out what's new at Nintendo!
+                    <a class="btn btn-default btn-default" href="http://nintendo.com">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="item" style="width: 750px; height:400px;">
+            <img src="~/images/fallOut4.jpg" alt="Package Management" class="img-responsive" width = 750 />
+            <div class="carousel-caption">
+                <p>
+                    The most recent installment into the Fallout series: FallOut 4 brings the post-apoctolyptic world to your doorstep.
+                    <a class="btn btn-default btn-default" href="http://fallout4.com">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="item" style="width: 750px; height:400px;">
+            <img src="~/images/linkedin_slide.png" class="img-responsive" width = 750 />
+            <div class="carousel-caption">
+                <p style="color:black">
+                    Want to check out my professional profile? Click below to be directed toward my Linkedin page.
+                    <a class="btn btn-default btn-default" href="https://www.linkedin.com/in/logan-minor-573b7441">
+                        Click here
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div id="rotateBody" onload="imgChange()">
+        <ul id="rotateUl">
+            <li>W</li>
+            <li>e</li>
+            <li>l</li>
+            <li>c</li>
+            <li>o</li>
+            <li>m</li>
+            <li>e</li>
+            <li>!</li>
+            <li class="rotateImg"><img id="rotateImg1" src="~/images/01 - Bowser.png" /></li>
+            <li class="rotateImg"><img id="rotateImg2" src="~/images/25 - Zelda.png" /></li>
+            <li class="rotateImg"><img id="rotateImg3" src="~/images/24 - Young Link.png" /></li>
+            <li class="rotateImg"><img id="rotateImg4" src="~/images/23 - Yoshi.png" /></li>
+            <li class="rotateImg"><img id="rotateImg5" src="~/images/22 - Sheik.png" /></li>
+            <li class="rotateImg"><img id="rotateImg6" src="~/images/21 - Samus.png" /></li>
+            <li class="rotateImg"><img id="rotateImg7" src="~/images/20 - Roy.png" /></li>
+            <li class="rotateImg"><img id="rotateImg8" src="~/images/19 - Pikachu.png" /></li>
+            <li class="rotateImg"><img id="rotateImg9" src="~/images/17 - Ness.png" /></li>
+        </ul>
+    </div>
+
+<div id="BSBannerContainer">
+    <div id="BSEpLinks">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <audio id="ep3Audio" class="EpAudio" preload='none'>
+                    <source src='~/audio/Episode 3.mp3' type='audio/mpeg' />
+                </audio>
+                Episode 3  <a href="#"><span id="audioControl3" class="glyphicon glyphicon-play-circle" data-toggle="modal" data-target="#ageVarModal"></span></a>
+            </li>
+            <li class="list-group-item">
+                <audio id="ep2Audio" class="EpAudio" preload='none'>
+                    <source src='~/audio/Episode 2.mp3' type='audio/mpeg' />
+                </audio>
+                Episode 2  <a href="#"><span id="audioControl2" class="glyphicon glyphicon-play-circle" data-toggle="modal" data-target="#ageVarModal"></span></a>
+            </li>
+            <li class="list-group-item">
+                <audio id="ep1Audio" class="EpAudio" preload='none'>
+                    <source src='~/audio/Episode 1.mp3' type='audio/mpeg' />
+                </audio>
+                Episode 1  <a href="#"><span id="audioControl1" class="glyphicon glyphicon-play-circle" data-toggle="modal" data-target="#ageVarModal"></span></a>
+            </li>
+        </ul>
+
+        <script id="BSAudioPlay">
+            $("li.list-group-item").hover(function () {
+                $(this).css("background-color", "#b32d00");
+                $(this).css("color", "white");
+
+            }, function(){
+                $(this).css("background-color", "white");
+                $(this).css("color", "black");
+            });
+
+            var yourAudio4 = document.getElementById('ep4Audio');
+            var yourAudio3 = document.getElementById('ep3Audio');
+            var yourAudio2 = document.getElementById('ep2Audio');
+            var yourAudio1 = document.getElementById('ep1Audio');
+            
+
+            $('[id^=audioControl]').one("click", function () {
+                $(this).data('clicked', true);
+                console.log(this);
+                $("#ageVarModal").appendTo("body");
+                $('#myModal').modal("toggle");
+            });
+
+            $(".modal-footer button").one("click", function () {
+                var id = $(this).attr('id');
+                var age_21 = sessionStorage.getItem('age');
+                if (age_21 == null) {
+                    if (id == "age-no") {
+                        sessionStorage.setItem('age', 'false');
+                    } else if (id == "age-yes")
+                    {
+                        sessionStorage.setItem('age', 'true');
+                        /*
+                         *Acceptance click event
+                         */
+                            if ($("#audioControl4").data('clicked'))
+                            {
+                                $("#audioControl4").trigger("click");
+                                $("#audioControl4").removeClass("glyphicon glyphicon-play-circle").addClass("glyphicon glyphicon-pause");
+                                    yourAudio4["play"]();
+
+                                $("#audioControl4").removeAttr("data-toggle", "");
+                                $("#audioControl4").removeAttr("data-target", "");
+                                $("#audioControl4").removeData("data-toggle", "");
+                                $("#audioControl4").removeData("data-target", "");
+                                $("#audioControl4").removeProp("data-toggle", "");
+                                $("#audioControl4").removeProp("data-target", "");
+                                $("#audioControl4").off();
+
+                                $("#audioControl4").click(function () {
+                                    if ($("#audioControl4").hasClass("glyphicon glyphicon-pause")) {
+                                        $("#audioControl4").removeClass("glyphicon glyphicon-pause").addClass("glyphicon glyphicon-play-circle");
+                                        yourAudio4["pause"]();
+                                    }
+                                    else {
+                                        $("#audioControl4").removeClass("glyphicon glyphicon-play-circle").addClass("glyphicon glyphicon-pause");
+                                        yourAudio4["play"]();
+                                    }
+                                });
+                            }
+
+                            else if ($("#audioControl3").data('clicked'))
+                                {
+                                    $("#audioControl3").trigger("click");
+                                    $("#audioControl3").removeClass("glyphicon glyphicon-play-circle").addClass("glyphicon glyphicon-pause");
+                                        yourAudio3["play"]();
+
+                                    $("#audioControl3").removeAttr("data-toggle", "");
+                                    $("#audioControl3").removeAttr("data-target", "");
+                                    $("#audioControl3").removeData("data-toggle", "");
+                                    $("#audioControl3").removeData("data-target", "");
+                                    $("#audioControl3").removeProp("data-toggle", "");
+                                    $("#audioControl3").removeProp("data-target", "");
+                                    $("#audioControl3").off();
+
+                                $("#audioControl3").click(function () {
+                                    if ($("#audioControl3").hasClass("glyphicon glyphicon-pause")) {
+                                        $("#audioControl3").removeClass("glyphicon glyphicon-pause").addClass("glyphicon glyphicon-play-circle");
+                                        yourAudio3["pause"]();
+                                    }   
+                                    else {
+                                        $("#audioControl3").removeClass("glyphicon glyphicon-play-circle").addClass("glyphicon glyphicon-pause");
+                                        yourAudio3["play"]();
+                                        }
+                                    });
+                                }
+
+                            else if ($("#audioControl2").data('clicked'))
+                                {
+                                    $("#audioControl2").trigger("click");
+                                    $("#audioControl2").removeClass("glyphicon glyphicon-play-circle").addClass("glyphicon glyphicon-pause");
+                                        yourAudio2["play"]();
+
+                                    $("#audioControl2").removeAttr("data-toggle", "");
+                                    $("#audioControl2").removeAttr("data-target", "");
+                                    $("#audioControl2").removeData("data-toggle", "");
+                                    $("#audioControl2").removeData("data-target", "");
+                                    $("#audioControl2").removeProp("data-toggle", "");
+                                    $("#audioControl2").removeProp("data-target", "");
+                                    $("#audioControl2").off();
+
+                                    $("#audioControl2").click(function () {
+                                        if ($("#audioControl2").hasClass("glyphicon glyphicon-pause")) {
+                                            $("#audioControl2").removeClass("glyphicon glyphicon-pause").addClass("glyphicon glyphicon-play-circle");
+                                            yourAudio2["pause"]();
+                                        }
+                                        else {
+                                            $("#audioControl2").removeClass("glyphicon glyphicon-play-circle").addClass("glyphicon glyphicon-pause");
+                                            yourAudio2["play"]();
+                                        }
+                                    });
+                                }
+
+                            else if ($("#audioControl1").data('clicked')) {
+                                $("#audioControl1").trigger("click");
+                                $("#audioControl1").removeClass("glyphicon glyphicon-play-circle").addClass("glyphicon glyphicon-pause");
+                                yourAudio1["play"]();
+
+                                $("#audioControl1").removeAttr("data-toggle", "");
+                                $("#audioControl1").removeAttr("data-target", "");
+                                $("#audioControl1").removeData("data-toggle", "");
+                                $("#audioControl1").removeData("data-target", "");
+                                $("#audioControl1").removeProp("data-toggle", "");
+                                $("#audioControl1").removeProp("data-target", "");
+                                $("#audioControl1").off();
+
+                                $("#audioControl1").click(function () {
+                                    if ($("#audioControl1").hasClass("glyphicon glyphicon-pause")) {
+                                        $("#audioControl1").removeClass("glyphicon glyphicon-pause").addClass("glyphicon glyphicon-play-circle");
+                                        yourAudio1["pause"]();
+                                    }
+                                        else {
+                                            $("#audioControl1").removeClass("glyphicon glyphicon-play-circle").addClass("glyphicon glyphicon-pause");
+                                            yourAudio1["play"]();
+                                    }
+                                });
+                            }
+
+                            else {
+                            return;
+                            }
+                    }
+
+                } else if (age_21 == 'false') {
+                    $('[id^=audioControl]').removeAttr("data-toggle", "");
+                    $('[id^=audioControl]').removeAttr("data-target", "");
+                    $('[id^=audioControl]').removeData("data-toggle", "");
+                    $('[id^=audioControl]').removeData("data-target", "");
+                    $('[id^=audioControl]').removeProp("data-toggle", "");
+                    $('[id^=audioControl]').removeProp("data-target", "");
+                    $('[id^=audioControl]').off();
+                }
+                else {
+                    return;
+                }
+            });
+        </script>
+
+    </div>
+</div>
+
+<div id="clearfix"></div>
+
+<div class="row" style="display: flex;
+    justify-content: center;
+    padding: 40px 0;">
+
+    <div class="col-md-3" style="border-width: 2px; border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  min-height: 300px;
+  box-shadow: 10px 10px 5px #888888;">
+
+        <h2 style="border-style: solid;
+    border-color: black; background-color: lightblue; text-align: center; border-width: 2px; border-style: solid">
+            Web Development Experience
+        </h2>
+
+        <div class="progress" style="color: black; border: groove; border-width: 2px; border-color: black;">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%; color: black; ">MVC</div>
+        </div>
+
+        <div class="progress" style="color: black; border: groove; border-width: 2px; border-color: black;">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%; color: black; ">LAMP Environment</div>
+        </div>
+
+        <div class="progress" style="color: black; border: groove; border-width: 2px; border-color: black;">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%; color: black; ">C#</div>
+        </div>
+
+        <div class="progress" style="color: black; border: groove; border-width: 2px; border-color: black;">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%; color: black; ">Javascript</div>
+        </div>
+
+        <div class="progress" style="color: black; border: groove; border-width: 2px; border-color: black;">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%; color: black; ">HTML5/CSS3</div>
+        </div>
+
+        <div class="progress" style="color: black; border: groove; border-width: 2px; border-color: black;">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%; color: black; ">PHP</div>
+        </div>
+
+        <div class="progress" style="color: black; border: groove; border-width: 2px; border-color: black;">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%; color: black; ">Jquery/UI</div>
+        </div>
+
+        <div class="progress" style="color: black; border: groove; border-width: 2px; border-color: black;">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%; color: black; ">Twitter Bootstrap</div>
+        </div>
+
+        <div class="progress" style="color: black; border: groove; border-width: 2px; border-color: black;">
+            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 75%; color: black; ">API's/JSON</div>
+        </div>
+
+        <div class="progress" style="color: black; border: groove; border-width: 2px; border-color: black;">
+            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%; color: black; ">ASP.NET 4.5 & 5</div>
+        </div>
+
+        <div class="progress" style="color: black; border: groove; border-width: 2px; border-color: black;">
+            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%; color: black; ">SQL</div>
+        </div>
+
+        <div class="progress" style="color: black; border: groove; border-width: 2px; border-color: black;">
+            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%; color: black; ">Drupal Content Managment</div>
+        </div>
+
+        <div class="progress" style="color: black; border: groove; border-width: 2px; border-color: black;">
+            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%; color: black; ">JD Edwards Enterprise systems</div>
+        </div>
+
+    </div>
+<div class="col-md-3" style="border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  min-height: 300px;
+  box-shadow: 10px 10px 5px #888888;">
+
+        <h2 style="border-style: solid;
+    border-color: black; background-color: lightblue; text-align: center;">
+            Independent Coursework
+        </h2>
+        <div style="background-color: lightcyan; font-weight: bold; border-style: solid;
+    border-color: black;">
+
+            <span class="glyphicon glyphicon-menu-right" font face="verdana"></span>
+            Software Development Fundementals (100)<br />
+
+            <span class="glyphicon glyphicon-menu-right" font face="verdana"></span>
+            HTML5 & CSS3 Fundamentals: Development for Absolute Beginners (100)<br />
+
+            <span class="glyphicon glyphicon-menu-right" font face="verdana"></span>
+            Software Testing with Visual Studio 2012 Jump Start (200)<br />
+
+            <span class="glyphicon glyphicon-menu-right" font face="verdana"></span>
+            Programming in C# Jump Start (100)<br />
+
+            <span class="glyphicon glyphicon-menu-right" font face="verdana"></span>
+            Developing in HTML5 with JavaScript and CSS3 Jump Start (200)<br />
+
+            <span class="glyphicon glyphicon-menu-right" font face="verdana"></span>
+            .Net Application Lifecycle Development (200)<br />
+
+            <span class="glyphicon glyphicon-menu-right" font face="verdana"></span>
+            Jquery & HTML5 Web Applications (200)<br />
+
+            <span class="glyphicon glyphicon-menu-right" font face="verdana"></span>
+            Thinking in AngularJS (200)<br />
+
+            <span class="glyphicon glyphicon-menu-right" font face="verdana"></span>
+            ASP.NET 5 MVC Web Applications (200)<br />
+
+            <span class="glyphicon glyphicon-menu-right" font face="verdana"></span>
+            Linux Development (200)<br />
+
+            <span class="glyphicon glyphicon-menu-right" font face="verdana"></span>
+            Developing with Red Hat and Apache2 Web Server (100)<br />
+
+        </div>
+
+    </div>
+    <div class="col-md-3" style="border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  min-height: 300px;
+  box-shadow: 10px 10px 5px #888888;">
+        <h2 style="border-style: solid;
+    border-color: black; background-color: lightblue; text-align: center;">
+            Goal
+        </h2>
+        <div style="text-align: center; background-color: lightcyan; font-weight: bold; border-style: solid; border-color: black;">I'm an aspiring full stack developer whose main focus is to seamlessly integrate business processes with software innovation through the engineering and development of applications and web solutions.</div>
+    </div>
+</div>
+

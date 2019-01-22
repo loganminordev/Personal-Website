@@ -1,0 +1,70 @@
+﻿
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="~/css/gamePage.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="~/js/videoGameRecorderCarosel.js"></script>
+
+@section Tweet {
+    <div id="tweetBar" class="col-sm-4">
+        <h5>Latest Overwatch Tweets </h5>
+        <a class="twitter-timeline" href="https://twitter.com/hashtag/overwatch" data-widget-id="781142709537017856" data-chrome="noheader nofooter noborders noscrollbar">#overwatch Tweets</a>
+        <script>
+        !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");
+        </script>
+    </div>
+}
+
+@section gameRibbon {
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <div id="gameContainerRibbon">
+        <h5 style="color: white;">Top Ten Games</h5>
+        <div id="topTenWrapper">
+            <div id="gameRib1" onmouseover="document.getElementById('gameNav').style.display = 'inline';" onmouseout="document.getElementById('gameNav').style.display = 'none';"><span style="color: black;">Overwatch <div id="gameNav"><span><a href="https://playoverwatch.com/en-us/"><span class="glyphicon glyphicon-home"></span></a><a href="https://www.reddit.com/r/overwatch"><img src="https://www.redditstatic.com/spreddit1.gif" alt="Subreddit" style="border: 2px" /></a><a href="https://www.twitch.tv/directory/game/Overwatch"><img src="~/images/Glitchicon.jpg" alt="Twitch" style="border: 2px" /></a><a href="https://en.wikipedia.org/wiki/Overwatch_(video_game)"><img src="http://icons.iconarchive.com/icons/sykonist/popular-sites/16/Wikipedia-globe-icon.png" alt="Wiki" style="border: 2px" /></a></span></div></span>
+            &nbsp;
+            </div>
+            <div id="gameRib2" onmouseover="document.getElementById('gameNav2').style.display = 'inline';" onmouseout="document.getElementById('gameNav2').style.display = 'none';"><span style="color: white;">Gears of War 4 <div id="gameNav2"><span><a href="https://gearsofwar.com"><span class="glyphicon glyphicon-home"></span></a><a href="https://www.reddit.com/r/GearsOfWar"><img src="https://www.redditstatic.com/spreddit1.gif" alt="Subreddit" border="0" /></a><a href="https://www.twitch.tv/directory/game/Gears%20of%20War"><img src="~/images/Glitchicon.jpg" alt="Twitch" border="0" /></a><a href="https://en.wikipedia.org/wiki/Gears_of_War_4"><img src="http://icons.iconarchive.com/icons/sykonist/popular-sites/16/Wikipedia-globe-icon.png" alt="Wiki" style="border: 2px" /></a></span></div></span>
+            &nbsp;
+            </div>
+            <div id="gameRib3" onmouseover="document.getElementById('gameNav3').style.display = 'inline';" onmouseout="document.getElementById('gameNav3').style.display = 'none';"><span style="color: white;">Rainbow Six: Seige <div id="gameNav3"><span><a href="https://rainbow6.ubi.com/siege/en-us/home/"><span class="glyphicon glyphicon-home"></span></a><a href="https://www.reddit.com/r/Rainbow6"><img src="https://www.redditstatic.com/spreddit1.gif" alt="Subreddit" border="0" /></a><a href="https://www.twitch.tv/directory/game/Tom%20Clancy&#39;s%20Rainbow%20Six%3A%20Siege"><img src="~/images/Glitchicon.jpg" alt="Twitch" border="0" /></a><a href="https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six_Siege"><img src="http://icons.iconarchive.com/icons/sykonist/popular-sites/16/Wikipedia-globe-icon.png" alt="Wiki" style="border: 2px" /></a></span></div></span>
+            &nbsp;
+            </div>
+            <div id="gameRib4" onmouseover="document.getElementById('gameNav4').style.display = 'inline';" onmouseout="document.getElementById('gameNav4').style.display = 'none';"><span style="color: white;">Battlefield 1 <div id="gameNav4"><span><a href="https://www.battlefield.com/"><span class="glyphicon glyphicon-home"></span></a><a href="https://www.reddit.com/r/battlefield_one"><img src="https://www.redditstatic.com/spreddit1.gif" alt="Subreddit" border="0" /></a><a href="https://www.twitch.tv/directory/game/Battlefield%201"><img src="~/images/Glitchicon.jpg" alt="Twitch" border="0" /></a><a href="https://en.wikipedia.org/wiki/Battlefield_1"><img src="http://icons.iconarchive.com/icons/sykonist/popular-sites/16/Wikipedia-globe-icon.png" alt="Wiki" style="border: 2px" /></a></span></div></span>
+            &nbsp;
+            </div>
+            <div id="gameRib5" onmouseover="document.getElementById('gameNav5').style.display = 'inline';" onmouseout="document.getElementById('gameNav5').style.display = 'none';">Forza <span style="color: white;">Horizon 3 <div id="gameNav5"><span><a href="https://www.forzamotorsport.net/en-US/games/fh3"><span class="glyphicon glyphicon-home"></span></a><a href="https://www.reddit.com/r/forzahorizon3/"  ><img src="https://www.redditstatic.com/spreddit1.gif" alt="Subreddit" border="0" /></a><a href="https://www.twitch.tv/directory/game/Forza%20Horizon%203"><img src="~/images/Glitchicon.jpg" alt="Twitch" border="0" /></a><a href="https://en.wikipedia.org/wiki/Forza_Horizon_3"><img src="http://icons.iconarchive.com/icons/sykonist/popular-sites/16/Wikipedia-globe-icon.png" alt="Wiki" style="border: 2px" /></a></span></div></span>
+            &nbsp;
+            </div>
+            <div id="gameRib6" onmouseover="document.getElementById('gameNav6').style.display = 'inline';" onmouseout="document.getElementById('gameNav6').style.display = 'none';">Witcher III <div id="gameNav6"><span><a href="https://www.thewitcher.com"><span class="glyphicon glyphicon-home"></span></a><a href="https://www.reddit.com/r/witcher/"><img src="https://www.redditstatic.com/spreddit1.gif" alt="Subreddit" border="0" /></a><a href="https://www.twitch.tv/directory/game/The%20Witcher%203:%20Wild%20Hunt"><img src="~/images/Glitchicon.jpg" alt="Twitch" border="0" /></a><a href="https://en.wikipedia.org/wiki/The_Witcher_3:_Wild_Hunt"><img src="http://icons.iconarchive.com/icons/sykonist/popular-sites/16/Wikipedia-globe-icon.png" alt="Wiki" style="border: 2px" /></a></span></div>
+            &nbsp;
+            </div>
+            <div id="gameRib7" onmouseover="document.getElementById('gameNav7').style.display = 'inline';" onmouseout="document.getElementById('gameNav7').style.display = 'none';">Grand Theft Auto V <div id="gameNav7"><span><a href="http://www.rockstargames.com/V/"><span class="glyphicon glyphicon-home"></span></a><a href="https://www.reddit.com/r/GrandTheftAutoV/"><img src="https://www.redditstatic.com/spreddit1.gif" alt="Subreddit" border="0" /></a><a href="https://www.twitch.tv/directory/game/Grand%20Theft%20Auto%20V"><img src="~/images/Glitchicon.jpg" alt="Twitch" border="0" /></a><a href="https://en.wikipedia.org/wiki/Grand_Theft_Auto_V"><img src="http://icons.iconarchive.com/icons/sykonist/popular-sites/16/Wikipedia-globe-icon.png" alt="Wiki" style="border: 2px" /></a></span></div>
+            &nbsp;
+            </div>
+            <div id="gameRib8" onmouseover="document.getElementById('gameNav8').style.display = 'inline';" onmouseout="document.getElementById('gameNav8').style.display = 'none';"><span style="color: white;">Dark Souls III <div id="gameNav8"><span><a href="https://www.darksouls3.com/"><span class="glyphicon glyphicon-home"></span></a><a href="https://www.reddit.com/r/darksouls3/"><img src="https://www.redditstatic.com/spreddit1.gif" alt="Subreddit" border="0" /></a><a href="https://www.twitch.tv/directory/game/Dark%20Souls%20III"><img src="~/images/Glitchicon.jpg" alt="Twitch" border="0" /></a><a href="https://en.wikipedia.org/wiki/Dark_Souls_III"><img src="http://icons.iconarchive.com/icons/sykonist/popular-sites/16/Wikipedia-globe-icon.png" alt="Wiki" style="border: 2px" /></a></span></div></span>
+            &nbsp;
+            </div>
+            <div id="gameRib9" onmouseover="document.getElementById('gameNav9').style.display = 'inline';" onmouseout="document.getElementById('gameNav9').style.display = 'none';"><span style="color: white;">Fallout 4 <div id="gameNav9"><span><a href="https://www.fallout4.com/"><span class="glyphicon glyphicon-home"></span></a><a href="https://www.reddit.com/r/fo4/"><img src="https://www.redditstatic.com/spreddit1.gif" alt="Subreddit" border="0" /></a><a href="https://www.twitch.tv/directory/game/Fallout%204"><img src="~/images/Glitchicon.jpg" alt="Twitch" border="0" /></a><a href="https://en.wikipedia.org/wiki/Fallout_4"><img src="http://icons.iconarchive.com/icons/sykonist/popular-sites/16/Wikipedia-globe-icon.png" alt="Wiki" style="border: 2px" /></a></span></div></span>
+            &nbsp;  
+            </div>
+            <div id="gameRib10" onmouseover="document.getElementById('gameNav10').style.display = 'inline';" onmouseout="document.getElementById('gameNav10').style.display = 'none';"><span style="color: white;">Dota 2 <div id="gameNav10"><span><a href="http://blog.dota2.com"><span class="glyphicon glyphicon-home"></span></a><a href="https://www.reddit.com/r/dota2"><img src="https://www.redditstatic.com/spreddit1.gif" alt="Subreddit" border="0" /></a><a href="https://www.twitch.tv/directory/game/Dota%202"><img src="~/images/Glitchicon.jpg" alt="Twitch" border="0" /></a><a href="https://en.wikipedia.org/wiki/Dota_2"><img src="http://icons.iconarchive.com/icons/sykonist/popular-sites/16/Wikipedia-globe-icon.png" alt="Wiki" style="border: 2px" /></a></span></div></span>
+            &nbsp;
+            </div>
+        </div>
+    </div>
+
+}
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div id="test1">
+    <div id="neonClipHeader">
+        <h2 id="neonText">My <span id="offset">C</span>lips</h2>
+    </div>
+</div>
+
+

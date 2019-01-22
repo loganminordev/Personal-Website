@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/style.css",
+    "inputFile": "wwwroot/css/style.sass"
+  },
+  {
+    "outputFile": "wwwroot/css/loadingAnim.css",
+    "inputFile": "wwwroot/css/loadingAnim.scss"
+  }
+]

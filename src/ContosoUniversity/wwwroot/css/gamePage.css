@@ -1,0 +1,286 @@
+﻿ @import url('https://fonts.googleapis.com/css?family=Raleway');
+
+    #navigationBar {
+        top: 0px;
+    }
+
+    body {
+    background-color: #bfbfbf; 
+    }
+
+
+#neonClipHeader {
+  text-align:center;
+  background-color: white;
+  position:absolute;
+  border:5px solid #1086e8;
+  width: 250px;
+  top: 125px;
+  border-radius:20px;
+  left:50%;
+  margin: -50px 0 0 -150px;
+  animation: border-flicker 2s linear infinite;
+}
+
+#neonText {
+  color: #e68a00;
+  font-family: 'Raleway', sans-serif;
+  font-size:64px;
+  letter-spacing:10px;
+  animation: text-flicker 3s linear infinite;
+}
+
+#offset {
+  animation: letter-flicker 2s linear infinite;
+}
+
+@keyframes text-flicker {
+  0% {
+    opacity:0.1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  
+  2% {
+    opacity:1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  8% {
+    opacity:0.1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  9% {
+    opacity:1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  12% {
+    opacity:0.1;
+    text-shadow: 0px 0px rgba(242, 22, 22, 1);
+  }
+  20% {
+    opacity:1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  }
+  25% {
+    opacity:0.3;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  }
+  30% {
+    opacity:1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  }
+  
+  70% {
+    opacity:0.7;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  }
+  
+  72% {
+    opacity:0.2;
+    text-shadow:0px 0px 29px rgba(242, 22, 22, 1)
+  }
+  
+  77% {
+    opacity:.9;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  }
+  100% {
+    opacity:.9;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  }
+}
+
+
+@keyframes letter-flicker {
+  0% {
+    opacity:0.1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  2% {
+    opacity:0.1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  4% {
+    opacity:1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  
+  
+  19% {
+    opacity:1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  21% {
+    opacity:0.1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  23% {
+    opacity:1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  
+  80% {
+    opacity:1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  83% {
+    opacity:0.4;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  87% {
+    opacity:1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+}
+
+    .carousel-indicators li {
+        background-color: black;
+    }
+
+    .left.carousel-control {
+        color: white;
+        position: relative;
+        bottom: -175px;
+        left: -425px;
+    }
+
+    .right.carousel-control {
+        color: white;
+        position: relative;
+        bottom: -175px;
+        left: 425px;
+    }
+
+    .carousel-control:hover {
+        color: #42f4f4;
+    }
+
+    #test1 {
+        background-color: black;
+        padding: 50px 100px 50px 80px;
+        text-align: center;
+        border: solid 4px black;
+        height: 825px;
+        overflow: auto;
+    }
+
+
+    #gameContainerRibbon {
+        float: right;
+        right: 0px;
+        position: fixed;
+        text-align: center;
+        font-weight: bold;
+        width: 350px;
+        z-index: 4;
+        background-color: #4295f4;
+    }
+
+    #topTenWrapper {
+        float: right;
+        right: 10px;
+        text-align: left;
+    }
+
+    #gameRib1 {
+        background-image: url('/images/GamesBanners/OW_Banner.png');
+    }
+
+    #gameRib2 {
+        background-image: url('/images/GamesBanners/GOW4_Banner.png');
+    }
+
+     #gameRib3 {
+        background-image: url('/images/GamesBanners/r6Siege_Banner.png');
+    }
+
+      #gameRib4 {
+        background-image: url('/images/GamesBanners/BF1_Banner.png');
+    }
+      #gameRib5 {
+        background-image: url('/images/GamesBanners/FH3_Banner.png');
+    }
+      #gameRib6 {
+        background-image: url('/images/GamesBanners/Witcher3_Banner.png');
+    }
+      #gameRib7 {
+        background-image: url('/images/GamesBanners/GTAV_Banner.png');
+    }
+      #gameRib8 {
+        background-image: url('/images/GamesBanners/DS3_Banner.png');
+    }
+      #gameRib9 {
+        background-image: url('/images/GamesBanners/FOIV_Banner.png');
+    }
+      #gameRib10 {
+        background-image: url('/images/GamesBanners/D2_Banner.png');
+    }
+
+    div[id^="gameRib"] {
+        clear: both;
+        display: inline-block;
+        float: right;
+        z-index: 9;
+        text-align: left;
+        -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+        transition-timing-function: ease;
+        background-color: #4295f4;
+        white-space: pre-wrap;
+        height: auto;
+        width: 150px;
+        overflow: hidden;
+    }
+
+     a > img {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+    div[id^="gameRib"]:hover {
+            width: 350px;
+            transition: width 1s;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+    div[id^="gameNav"] {
+        position: relative;
+        top: 0px;
+        left: 50px;
+        display: none;
+        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        background-color: transparent;
+    }
+
+    #tweetBar {
+        float: left;
+        left: 0px;
+        position: fixed;
+        background-color: #4295f4;
+        text-align: center;
+        color: #FFF;
+        font-weight: bold;
+        width: 365px;
+        z-index: 10000;
+        overflow: auto;
+    }
+
+    .carousel-inner {
+        border: solid 1px white;
+    }
+
+    .table {
+        z-index: -1;
+        overflow: auto;
+        border: 1px solid black;
+    }
+
+        .table th {
+            text-align: center;
+        }
+
+    #gameCarousel {
+        position: relative;
+        top: 125px;
+    }

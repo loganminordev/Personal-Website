@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="~/js/ImageGrid.js"></script>
+    <style>
+        .mySlides {
+            display: none;
+        }
+
+        #imgGalleryContainer {
+            padding: 5px;
+            border: 2px dashed;
+            height: auto;
+            text-align: justify;
+            -ms-text-justify: distribute-all-lines;
+            text-justify: distribute-all-lines;
+        }
+
+        div.w3-col.s4 > img {
+            width: 357px;
+            height: 100%;
+        }
+
+       div.w3-col.s4 > img:hover {
+            transform:scale(1.5);
+    -ms-transform:scale(1.5); /* IE 9 */
+    -moz-transform:scale(1.5); /* Firefox */
+    -webkit-transform:scale(1.5); /* Safari and Chrome */
+        -o-transform:scale(1.5); /* Opera */
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>Image Gallery</h2>
+    <script>
+    function openModal() {
+    document.getElementById('myModal').style.display = "block";
+        }
+
+    function closeModal() {
+        document.getElementById('myModal').style.display = "none";
+        }
+
+    var slideIndex = 1;
+        showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+        showDivs(slideIndex = n);
+        }
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+    </script>
+
+    <div id="imgGalleryContainer">    
+    </div>
+    
+    <div id="myModal" class="w3-modal w3-black">
+        <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright" onclick="closeModal()" style="cursor:pointer">×</span>
+        <div class="w3-modal-content">
+            <div class="w3-content" style="max-width:1200px">
+                @*prgrammatically append here*@
+
+                <div class="w3-row w3-black w3-center">
+                    <div class="w3-display-container">
+                        <p id="caption"></p>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <span class="w3-display-left w3-btn" onclick="plusDivs(-1)">❮</span>
+        <span class="w3-display-right w3-btn" onclick="plusDivs(1)">❯</span>
+    </div>
+  </body>
+</html>
