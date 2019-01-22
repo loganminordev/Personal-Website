@@ -6,6 +6,7 @@
     $("#statusText").fadeOut(1000);
 
     $("#loadingAnimationContainer").fadeOut(1000);
+    //Test comment for first Github commit!
     //$.getScript("3dCubeRotation.js", function () {});
 
 }, 9800);
